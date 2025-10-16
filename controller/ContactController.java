@@ -26,16 +26,34 @@ public class ContactController {
             String choice = sc.nextLine();
 
             switch (choice) {
-                case "1" -> service.showContacts();
-                case "2" -> addContact();
-                case "3" -> updateContact();
-                case "4" -> deleteContact();
-                case "5" -> searchContact();
-                case "6" -> confirmAndRead();
-                case "7" -> confirmAndWrite();
-                case "8" -> { System.out.println("Tạm biệt!"); return; }
-                default -> System.out.println("⚠ Lựa chọn không hợp lệ!");
+                case "1":
+                    service.showContacts();
+                    break;
+                case "2":
+                    addContact();
+                    break;
+                case "3":
+                    updateContact();
+                    break;
+                case "4":
+                    deleteContact();
+                    break;
+                case "5":
+                    searchContact();
+                    break;
+                case "6":
+                    confirmAndRead();
+                    break;
+                case "7":
+                    confirmAndWrite();
+                    break;
+                case "8":
+                    System.out.println("Tạm biệt!");
+                    return;
+                default:
+                    System.out.println("⚠ Lựa chọn không hợp lệ!");
             }
+
         }
     }
 
